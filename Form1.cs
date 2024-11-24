@@ -17,7 +17,7 @@ namespace HidePDF
             string stringEscondida = "fenix-55123".Encrypt();
 
             CreatePDF(namefile, stringEscondida);
-            
+
             ReadPDF(namefile);
         }
 
@@ -27,7 +27,7 @@ namespace HidePDF
 
             var secretMessage = document.Info.Title.Dencrypt();
 
-            MessageBox.Show(secretMessage+"\n"+ document.Info.Title);
+            MessageBox.Show(secretMessage + "\n" + document.Info.Title);
         }
 
         void CreatePDF(string namefile, string stringEscondida)
@@ -52,6 +52,11 @@ namespace HidePDF
             page.Annotations.Add(textAnnot);
 
             document.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
